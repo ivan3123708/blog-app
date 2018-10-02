@@ -10495,7 +10495,7 @@ a.text-dark:focus {
   margin-top: 30px;
 }
 
-.postfeed .post {
+.post {
   margin: 10px auto;
   background-color: white;
   border: 1px solid transparent;
@@ -10503,25 +10503,30 @@ a.text-dark:focus {
           box-shadow: 0 2px 4px #0000000a;
 }
 
-.postfeed .post .box {
+.post .box {
   width: 90%;
   margin: 20px auto;
 }
 
-.postfeed .post .box #category {
+.post .box #category {
   margin-bottom: 0;
 }
 
-.postfeed .post .box #title {
+.post .box #title {
   margin: 0;
   margin-top: 10px;
   color: #38c172;
   text-transform: uppercase;
 }
 
-.postfeed .post .box #content {
+.post .box #title a {
+  color: #38c172;
+  text-decoration: none;
+}
+
+.post .box #content {
   margin-top: 30px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .navbar-laravel {

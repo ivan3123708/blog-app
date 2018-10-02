@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'PostFeedController@index')->name('home');
+Route::get('/{category}', 'PostFeedController@filterCategory')->name('home.category');
+Route::resource('posts', 'PostController');
