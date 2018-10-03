@@ -10481,6 +10481,10 @@ a.text-dark:focus {
   font-size: 24px;
 }
 
+.navbar {
+  margin-bottom: 30px;
+}
+
 .navbar-left a.nav-link {
   padding-left: 0 !important;
   padding-right: 1rem !important;

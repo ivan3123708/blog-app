@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', 'PostFeedController@index')->name('home');
-Route::get('/{category}', 'PostFeedController@filterCategory')->name('home.category');
+Route::get('home', 'PostFeedController@index')->name('home');
+Route::get('home/{category}', 'PostFeedController@filterCategory')->name('home.category');
 Route::resource('posts', 'PostController');
+Auth::routes();
+
+Route::get('dashboard', 'DashboardController@index')->name('dashboard');
