@@ -10544,6 +10544,26 @@ i {
   margin-bottom: 0;
 }
 
+.post .box #control {
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post .box #control a {
+  text-decoration: none;
+}
+
+.post .box #control #delete {
+  margin-left: 10px;
+  padding: 0;
+  color: #f85959;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .post .box #title {
   margin: 0;
   margin-top: 10px;
