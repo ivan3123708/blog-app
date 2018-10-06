@@ -1,4 +1,7 @@
+@import 'base.scss';
 @import 'partials/header';
 @import 'partials/navbar';
 @import 'views/home';
-@import 'views/post';
+@import 'views/dashboard';
+@import 'views/posts/create';
+@import 'views/posts/show';

@@ -14,7 +14,9 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::orderBy('created_at', 'desc')->paginate(10);
+
+        return view('home', ['posts' => $posts]);
     }
 
     /**
@@ -24,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -35,7 +37,20 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+            'content' => 'required'
+        ]);
+
+        $post = new Post;
+
+        $post->title = $request->title;
+        $post->category = $request->category;
+        $post->content = $request->content;
+        $post->user_id = auth()->user()->id;
+        $post->save();
+        
+        return redirect('dashboard');
     }
 
     /**
@@ -48,7 +63,7 @@ class PostController extends Controller
     {
         $post = Post::find($id);
 
-        return view('post', ['post' => $post]);
+        return view('posts.show', ['post' => $post]);
     }
 
     /**
