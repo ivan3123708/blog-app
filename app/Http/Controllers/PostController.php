@@ -7,6 +7,11 @@ use App\Post;
 
 class PostController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -76,6 +81,10 @@ class PostController extends Controller
     {
         $post = Post::find($id);
 
+        if (auth()->user()->id !== $post->user_id) {
+            return redirect('dashboard');
+        }
+        
         return view('posts.edit', ['post' => $post]);
     }
 
@@ -111,6 +120,11 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+
+        if (auth()->user()->id !== $post->user_id) {
+            return redirect('dashboard');
+        }
+        
         $post->delete();
 
         return redirect('dashboard');

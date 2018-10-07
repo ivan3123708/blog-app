@@ -8,12 +8,12 @@
       <!-- Left Side Of Navbar -->
       <ul class="navbar-nav mr-auto navbar-left">
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('home') }}">
+          <a class="nav-link" href="{{ route('posts.index') }}">
             <i class="fas fa-home"></i> Home <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="{{ route('users.index') }}">
             <i class="fas fa-users"></i> Bloggers
           </a>
         </li>
@@ -22,15 +22,15 @@
             <i class="fas fa-th-list"></i> Categories <span class="caret"></span>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('home.category', ['category' => 'Business']) }}"><i class="fas fa-briefcase"></i> Business</a>
-            <a class="dropdown-item" href="{{ route('home.category', ['category' => 'Entertainment']) }}"><i class="far fa-star"></i> Entertainment</a>
-            <a class="dropdown-item" href="{{ route('home.category', ['category' => 'Health']) }}"><i class="fas fa-heartbeat"></i> Health</a>
-            <a class="dropdown-item" href="{{ route('home.category', ['category' => 'History']) }}"><i class="fas fa-landmark"></i> History</a>
-            <a class="dropdown-item" href="{{ route('home.category', ['category' => 'Politics']) }}"><i class="fas fa-user-tie"></i> Politics</a>
-            <a class="dropdown-item" href="{{ route('home.category', ['category' => 'Religion']) }}"><i class="fas fa-bible"></i> Religion</a>
-            <a class="dropdown-item" href="{{ route('home.category', ['category' => 'Science']) }}"><i class="fas fa-flask"></i> Science</a>
-            <a class="dropdown-item" href="{{ route('home.category', ['category' => 'Sport']) }}"><i class="fas fa-basketball-ball"></i> Sport</a>
-            <a class="dropdown-item" href="{{ route('home.category', ['category' => 'Technology']) }}"><i class="fas fa-laptop"></i>Technology</a>
+            <a class="dropdown-item" href="{{ route('category', ['category' => 'Business']) }}"><i class="fas fa-briefcase"></i> Business</a>
+            <a class="dropdown-item" href="{{ route('category', ['category' => 'Entertainment']) }}"><i class="far fa-star"></i> Entertainment</a>
+            <a class="dropdown-item" href="{{ route('category', ['category' => 'Health']) }}"><i class="fas fa-heartbeat"></i> Health</a>
+            <a class="dropdown-item" href="{{ route('category', ['category' => 'History']) }}"><i class="fas fa-landmark"></i> History</a>
+            <a class="dropdown-item" href="{{ route('category', ['category' => 'Politics']) }}"><i class="fas fa-user-tie"></i> Politics</a>
+            <a class="dropdown-item" href="{{ route('category', ['category' => 'Religion']) }}"><i class="fas fa-bible"></i> Religion</a>
+            <a class="dropdown-item" href="{{ route('category', ['category' => 'Science']) }}"><i class="fas fa-flask"></i> Science</a>
+            <a class="dropdown-item" href="{{ route('category', ['category' => 'Sport']) }}"><i class="fas fa-basketball-ball"></i> Sport</a>
+            <a class="dropdown-item" href="{{ route('category', ['category' => 'Technology']) }}"><i class="fas fa-laptop"></i>Technology</a>
           </div>
         </li>
       </ul>

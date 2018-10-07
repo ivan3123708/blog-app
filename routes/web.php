@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('home', 'PostController@index')->name('home');
-Route::get('home/{category}', 'PostFeedController@filterCategory')->name('home.category');
-Route::resource('posts', 'PostController');
 Auth::routes();
 
+Route::get('/', 'PostController@index')->name('/');
+Route::get('category/{category}', 'HomeController@category')->name('category');
 Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+Route::get('users', 'UserController@index')->name('users.index');
+Route::get('users/{user}', 'UserController@show')->name('users.show');
+
+Route::resource('posts', 'PostController');
