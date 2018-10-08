@@ -1,0 +1,34 @@
+.users {
+  .user {
+    margin: 10px auto;
+    background-color: white;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 4px #0000000a;
+
+    .box {
+      display: flex;
+      width: 90%;
+      margin: 20px auto;
+
+      #avatar {
+        max-width: 65px;
+        max-height: 65px;
+        margin-right: 20px;
+      }
+
+      #name {
+        color: $green;
+
+        a {
+          color: $green;
+          text-decoration: none;
+        }
+      }
+
+      p {
+        text-align: left;
+        margin: 0;
+      }
+    }
+  }
+}

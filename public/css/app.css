@@ -10518,6 +10518,10 @@ i {
 
 .dashboard .posts {
   margin-top: 30px;
+}
+
+.dashboard .posts .post {
+  margin: 10px auto;
   background: white;
   -webkit-box-shadow: 0 2px 4px #0000000a;
           box-shadow: 0 2px 4px #0000000a;
@@ -10579,6 +10583,65 @@ i {
 .post .box #content {
   margin-top: 30px;
   font-size: 16px;
+}
+
+.users .user {
+  margin: 10px auto;
+  background-color: white;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 2px 4px #0000000a;
+          box-shadow: 0 2px 4px #0000000a;
+}
+
+.users .user .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.users .user .box #avatar {
+  max-width: 65px;
+  max-height: 65px;
+  margin-right: 20px;
+}
+
+.users .user .box #name {
+  color: #38c172;
+}
+
+.users .user .box #name a {
+  color: #38c172;
+  text-decoration: none;
+}
+
+.users .user .box p {
+  text-align: left;
+  margin: 0;
+}
+
+.user {
+  background-color: white;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 2px 4px #0000000a;
+          box-shadow: 0 2px 4px #0000000a;
+}
+
+.user .box {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.user .box #avatar {
+  max-width: 200px;
+  max-height: 200px;
+  margin-bottom: 20px;
+}
+
+.user .box .posts {
+  text-align: left;
 }
 
 .navbar-laravel {

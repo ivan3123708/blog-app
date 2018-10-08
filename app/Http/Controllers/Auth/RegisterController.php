@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -35,9 +36,10 @@ class RegisterController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Request $request)
     {
         $this->middleware('guest');
+        $this->request = $request;
     }
 
     /**
@@ -52,6 +54,7 @@ class RegisterController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
+            'avatar' => 'image|nullable|max:1999',
         ]);
     }
 
@@ -63,10 +66,19 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        if ($this->request->hasFile('avatar')) {
+            $avatarPath = time() . $this->request->file('avatar')->getClientOriginalName();
+            $this->request->file('avatar')->storeAs('public/avatars/', $avatarPath);
+        } else {
+            $avatarPath = 'default_avatar.jpg';
+        }
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            'avatar' => $avatarPath,
         ]);
     }
 }

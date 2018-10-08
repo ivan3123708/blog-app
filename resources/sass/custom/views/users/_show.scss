@@ -1,0 +1,21 @@
+.user {
+  background-color: white;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 4px #0000000a;
+
+  .box {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+
+    #avatar {
+      max-width: 200px;
+      max-height: 200px;
+      margin-bottom: 20px;
+    }
+
+    .posts {
+      text-align: left;
+    }
+  }
+}
