@@ -46,5 +46,41 @@
       margin-top: 30px;
       font-size: 16px;
     }
+
+    #comments {
+      width: 105px;
+      color: white;
+      background: $cyan;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    hr {
+      margin: 30px auto;
+    }
+
+    .comments {
+      form {
+        margin: 30px auto;
+      }
+
+      .comment {
+        #author {
+          margin-top: 10px;
+          margin-bottom: 0;
+          font-size: 16px;
+
+          a {
+            color: $green;
+            text-decoration: none;
+          }
+        }
+        
+        #content {
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }

@@ -35,4 +35,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Post');
     }
+
+    /**
+     * One-to-many relationship with Comment 
+     */
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
+    }
 }

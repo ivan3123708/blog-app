@@ -11,10 +11,11 @@
             @foreach ($posts as $post)
                 <div class="post">
                     <div class="box">
-                    <p id="category">{{ $post->category }}</p>
-                    <h3 id="title">{{ $post->title }}</h3>
-                    <small id="date">{{ $post->created_at }} by {{ $post->user->name }}</small>
-                    <p id="content">{{ $post->content }}</p>
+                        <p id="category">{{ $post->category }}</p>
+                        <h3 id="title">{{ $post->title }}</h3>
+                        <small id="date">{{ $post->created_at }} by {{ $post->user->name }}</small>
+                        <p id="content">{{ $post->content }}</p>
+                        <p id="comments">Comments: {{ count($post->comments) }}</p>
                     </div>
                 </div>
             @endforeach
