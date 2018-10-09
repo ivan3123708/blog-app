@@ -16,6 +16,12 @@
 
     .posts {
       text-align: left;
+
+      .post {
+        .box {
+          text-align: left;
+        }
+      }
     }
   }
 }

@@ -8,11 +8,10 @@
       <div class="posts">
         <h4>Posts:</h4>
           @if (count($user->posts))
-            <ul>
-              @foreach($user->posts as $post)
-                <li><a href="{{ route('posts.show', ['id' => $post->id]) }}">{{ $post->title }}</a></li>
-              @endforeach
-            </ul>
+            @foreach($user->posts as $post)
+              @post(['post' => $post])
+              @endpost
+            @endforeach
           @else
             <p><i>No Posts</i></p>
           @endif
