@@ -10466,6 +10466,10 @@ a.text-dark:focus {
   }
 }
 
+.content {
+  min-height: 70vh;
+}
+
 i {
   margin-right: 6px;
 }
@@ -10489,14 +10493,25 @@ i {
   margin-bottom: 30px;
 }
 
-.navbar-left a.nav-link {
-  padding-left: 0 !important;
-  padding-right: 1rem !important;
+@media (min-width: 768px) {
+  .navbar-left a.nav-link {
+    padding-left: 0 !important;
+    padding-right: 1rem !important;
+  }
+
+  .navbar-right a.nav-link {
+    padding-left: 1rem !important;
+    padding-right: 0 !important;
+  }
 }
 
-.navbar-right a.nav-link {
-  padding-left: 1rem !important;
-  padding-right: 0 !important;
+#footer {
+  height: 25px;
+  margin-top: 20px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#42f4ad), to(#41a2f2));
+  background-image: linear-gradient(to right, #42f4ad, #41a2f2);
+  color: white;
+  text-align: center;
 }
 
 .postfeed {
@@ -10679,6 +10694,7 @@ i {
   max-width: 200px;
   max-height: 200px;
   margin-bottom: 20px;
+  border-radius: 4px;
 }
 
 .user .box .posts {

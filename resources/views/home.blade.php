@@ -8,7 +8,7 @@
         @endpost
       @endforeach
     @else
-      <h3 id="no-posts">No Posts</h3>
+      <h3 id="no-posts">No Posts.</h3>
     @endif
   </div>
 @endsection

@@ -25,7 +25,7 @@
         <form action="{{ route('comments.store', ['id' => $post->id]) }}" method="POST">
           @csrf
           <div class="form-group">
-            <textarea class="form-control" name="content" rows="3"></textarea>
+            <textarea class="form-control" name="content" rows="5"></textarea>
           </div>
           <button class="btn btn-primary" type="submit">Add Comment</button>
         </form>

@@ -26,8 +26,12 @@
         @include('partials.navbar')
 
         <main class="container">
-            @yield('content')
+            <div class="content">
+                @yield('content')
+            </div>
         </main>
+
+        @include('partials.footer')
     </div>
 </body>
 </html>
